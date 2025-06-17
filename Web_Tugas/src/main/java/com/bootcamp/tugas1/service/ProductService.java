@@ -23,11 +23,15 @@ public class ProductService {
 	}
 	
 	public List<Product> findAll() throws SQLException{
-		return this.repo.findAll();
+		List<Product> products =  this.repo.findAll();
+		this.connection.close();
+		return products;
 	}
 	
 	public Product findOneById(int productId) throws SQLException {
-		return this.repo.findOneById(productId);
+		Product product = this.repo.findOneById(productId);
+		this.connection.close();
+		return product;
 	}
 	
 	public int insert(Product product) throws SQLException {

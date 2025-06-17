@@ -68,7 +68,7 @@ public class ProductRepository {
 	
 	public int updateProduct (Product product, int productId) throws SQLException {
 		int result = 0;
-		String query = "UPDATE products SET name = ?, type_id = ?, price = ? where id = ? and p.is_deleted=0";
+		String query = "UPDATE products SET name = ?, type_id = ?, price = ? where id = ? and is_deleted=0";
 		
 		PreparedStatement preparedStatement = this.connection.prepareStatement(query);
 		preparedStatement.setString(1, product.getName());
