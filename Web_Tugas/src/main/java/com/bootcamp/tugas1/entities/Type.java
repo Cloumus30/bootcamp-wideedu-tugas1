@@ -1,8 +1,8 @@
-package com.bootcamp.tugas1.repositories;
+package com.bootcamp.tugas1.entities;
 
 public class Type {
-	int id;
-	String name;
+	private int id;
+	private String name;
 	
 	public Type(int id, String name) {
 		this.id = id;
